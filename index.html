@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    input,
+    button,
+    select {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #password-container {
+      margin-top: 20px;
+      display: none;
+    }
+
+    #password {
+      font-weight: bold;
+      word-break: break-all;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Deterministic Password Generator</h2>
+
+  <label for="salt">Enter your salt:</label>
+  <input type="password" id="salt" placeholder="Salt.." required>
+
+  <!-- <label for="length">Password Length:</label>
+  <select id="length">
+    <option value="8">8</option>
+    <option value="12" selected>12</option>
+    <option value="16">16</option>
+    <option value="20">20</option>
+    <option value="24">24</option>
+    <option value="28">28</option>
+    <option value="32">32</option>
+  </select> -->
+
+  <button onclick="generatePassword()">Generate</button>
+
+  <div id="password-container">
+    <button onclick="togglePassword()">Show Password</button>
+    <p id="password"></p>
+    <button onclick="copyPassword()">Copy</button>
+  </div>
+
+  <script>
+    (function (_0x2ee457, _0x22b2ae) { const _0xd8f6ba = _0x4e96, _0x1e82fa = _0x2ee457(); while (!![]) { try { const _0x46b0e2 = -parseInt(_0xd8f6ba(0x15c)) / 0x1 * (parseInt(_0xd8f6ba(0x14e)) / 0x2) + parseInt(_0xd8f6ba(0x145)) / 0x3 + -parseInt(_0xd8f6ba(0x14c)) / 0x4 + -parseInt(_0xd8f6ba(0x151)) / 0x5 * (parseInt(_0xd8f6ba(0x14b)) / 0x6) + parseInt(_0xd8f6ba(0x13f)) / 0x7 * (-parseInt(_0xd8f6ba(0x14d)) / 0x8) + -parseInt(_0xd8f6ba(0x144)) / 0x9 + parseInt(_0xd8f6ba(0x15b)) / 0xa * (parseInt(_0xd8f6ba(0x149)) / 0xb); if (_0x46b0e2 === _0x22b2ae) break; else _0x1e82fa['push'](_0x1e82fa['shift']()); } catch (_0xb72c34) { _0x1e82fa['push'](_0x1e82fa['shift']()); } } }(_0x45d8, 0x49a65)); function _0x4e96(_0x5e9959, _0x17e953) { const _0x45d86d = _0x45d8(); return _0x4e96 = function (_0x4e9692, _0x2ea293) { _0x4e9692 = _0x4e9692 - 0x13a; let _0x47c86d = _0x45d86d[_0x4e9692]; return _0x47c86d; }, _0x4e96(_0x5e9959, _0x17e953); } function generatePassword() { const _0x2fbe14 = _0x4e96; let _0x3c90a8 = document['getElementById'](_0x2fbe14(0x13c))[_0x2fbe14(0x13e)][_0x2fbe14(0x140)](), _0x220376 = 0x10; if (!_0x3c90a8) return alert(_0x2fbe14(0x156)); async function _0x3018ad(_0x33568d) { const _0x3dbb18 = _0x2fbe14, _0xffe04c = new TextEncoder(), _0x5d38ab = _0xffe04c[_0x3dbb18(0x148)](_0x33568d), _0x5c56fc = await crypto['subtle'][_0x3dbb18(0x15a)](_0x3dbb18(0x157), _0x5d38ab); return Array[_0x3dbb18(0x158)](new Uint8Array(_0x5c56fc))[_0x3dbb18(0x147)](_0x495740 => _0x495740['toString'](0x10)['padStart'](0x2, '0'))['join'](''); } _0x3018ad(_0x3c90a8)[_0x2fbe14(0x141)](_0x1ce75b => { const _0xaf78e = _0x2fbe14; let _0x2941c4 = String[_0xaf78e(0x13b)](0x41 + parseInt(_0x1ce75b[_0xaf78e(0x153)](0x0, 0x2), 0x10) % 0x1a), _0x4ded40 = String['fromCharCode'](0x61 + parseInt(_0x1ce75b[_0xaf78e(0x153)](0x2, 0x2), 0x10) % 0x1a), _0x36e3e5 = (parseInt(_0x1ce75b[_0xaf78e(0x153)](0x4, 0x2), 0x10) % 0xa)['toString'](), _0x5dae1b = _0xaf78e(0x152), _0x9aba59 = _0x5dae1b[parseInt(_0x1ce75b['substr'](0x6, 0x2), 0x10) % _0x5dae1b[_0xaf78e(0x143)]], _0x548dc2 = _0x1ce75b[_0xaf78e(0x13d)](0x8, 0x8 + _0x220376 - 0x4), _0x32da62 = _0x548dc2 + _0x2941c4 + _0x4ded40 + _0x36e3e5 + _0x9aba59; document[_0xaf78e(0x13a)](_0xaf78e(0x154))['textContent'] = _0x32da62, document[_0xaf78e(0x13a)](_0xaf78e(0x159))[_0xaf78e(0x146)]['display'] = _0xaf78e(0x150), document['getElementById'](_0xaf78e(0x154))[_0xaf78e(0x146)][_0xaf78e(0x14f)] = 'none'; }); } function togglePassword() { const _0x423bdc = _0x4e96; let _0x264fd8 = document['getElementById'](_0x423bdc(0x154)); _0x264fd8[_0x423bdc(0x146)]['display'] = _0x264fd8['style'][_0x423bdc(0x14f)] === _0x423bdc(0x14a) ? 'block' : _0x423bdc(0x14a); } function copyPassword() { const _0x3af95c = _0x4e96; let _0x5d7e27 = document[_0x3af95c(0x13a)](_0x3af95c(0x154))['textContent']; if (!_0x5d7e27) return; navigator[_0x3af95c(0x15d)][_0x3af95c(0x142)](_0x5d7e27)[_0x3af95c(0x141)](() => { const _0x4c0835 = _0x3af95c; alert(_0x4c0835(0x155)); }); } function _0x45d8() { const _0x28bb06 = ['fromCharCode', 'salt', 'substring', 'value', '1659nmALzT', 'trim', 'then', 'writeText', 'length', '676566dNSHTJ', '1735905pEQrID', 'style', 'map', 'encode', '6017XTpvUf', 'none', '17580cWWyJs', '2118388FuMmPd', '15256ZTzAmR', '6GCHxpj', 'display', 'block', '855yznJAp', '!@#$%^&*()-_=+[]{}|;:,.<>?/~', 'substr', 'password', 'Password\x20copied\x20to\x20clipboard!', 'Please\x20enter\x20a\x20salt!', 'SHA-256', 'from', 'password-container', 'digest', '29110EtdOZq', '103841XFfvBS', 'clipboard', 'getElementById']; _0x45d8 = function () { return _0x28bb06; }; return _0x45d8(); }
+  </script>
+</body>
+
+</html>
